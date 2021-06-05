@@ -36,24 +36,24 @@ const events = [
     testimonial:
       'For our hackathon, Hack Club Bank has given us the tools to make sure our organization is professional with sponsors. Bank and their team have created an easily manageable resource to make sure any event is run successfully. We would highly recommend any organization be a part of the Hack Club ecosystem.'
   },
-  {
-    name: 'Los Altos Hacks',
-    location: 'Sunnyvale, CA',
-    organizer: 'Jamsheed Mistri',
-    budget: 30,
-    attendees: 350,
-    testimonial:
-      'Hack Club Bank has made it incredibly easy to handle our event’s funds and has provided countless tools to increase our productivity. With Bank, I can focus on making the event the best it can be.'
-  },
-  {
-    name: 'SLO Hacks',
-    location: 'San Luis Obispo, CA',
-    organizer: 'Selynna Sun',
-    budget: 50,
-    attendees: 300,
-    testimonial:
-      'Hack Club Bank significantly improved the fiscal sponsorship process for SLO Hacks, through a beautifully-designed platform full of useful features, in addition to a responsive team addressed our questions as quickly as possible.'
-  },
+  // {
+  //   name: 'Los Altos Hacks',
+  //   location: 'Sunnyvale, CA',
+  //   organizer: 'Jamsheed Mistri',
+  //   budget: 30,
+  //   attendees: 350,
+  //   testimonial:
+  //     'Hack Club Bank has made it incredibly easy to handle our event’s funds and has provided countless tools to increase our productivity. With Bank, I can focus on making the event the best it can be.'
+  // },
+  // {
+  //   name: 'SLO Hacks',
+  //   location: 'San Luis Obispo, CA',
+  //   organizer: 'Selynna Sun',
+  //   budget: 50,
+  //   attendees: 300,
+  //   testimonial:
+  //     'Hack Club Bank significantly improved the fiscal sponsorship process for SLO Hacks, through a beautifully-designed platform full of useful features, in addition to a responsive team addressed our questions as quickly as possible.'
+  // },
   {
     name: 'MAHacks',
     location: 'Boston, MA',
@@ -64,6 +64,7 @@ const events = [
       'Hack Club Bank removed the barriers to starting fundraising for MAHacks. In mere days, vs months of nonprofit paperwork, Bank enabled my team to invoice sponsors professionally and manage our finances on a clear, up-to-date dashboard. I highly recommend using Bank & joining the Hack Club community.'
   },
   {
+    transparency: 'dv-hacks',
     name: 'DV Hacks',
     location: 'Santa Clara, CA',
     organizer: 'Khushi Wadhwa',
@@ -88,12 +89,11 @@ const Main = styled(Container).attrs({
 })`
   border-radius: 0;
   position: relative;
-  overflow: hidden;
   display: grid;
   grid-gap: ${theme.space[3]}px;
   ${theme.mediaQueries.md} {
     border-radius: ${theme.radii[2]};
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(${theme.breakpoints[0]}em, 1fr));
     grid-gap: ${theme.space[5]}px;
   }
 `
